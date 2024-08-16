@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 DOM Manipulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>HTML5 DOM Manipulation</h1>
+  </header>
+
+  <main>
+    <section id="dom-manipulation">
+      <h2>Manipulate the DOM</h2>
+      <button onclick="addElement()">Add Element</button>
+      <button onclick="removeElement()">Remove Element</button>
+      <div id="container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 HTML5 DOM Manipulation Example</p>
+  </footer>
+
+  <script>
+    function addElement() {
+      const newDiv = document.createElement('div');
+      newDiv.innerText = "New Element";
+      document.getElementById('container').appendChild(newDiv);
+    }
+
+    function removeElement() {
+      const container = document.getElementById('container');
+      if (container.lastChild) {
+        container.removeChild(container.lastChild);
+      }
+    }
+  </script>
+</body>
+</html>

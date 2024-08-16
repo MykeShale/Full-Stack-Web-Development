@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Event</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Community Event</h1>
+    <nav>
+      <ul>
+        <li><a href="#registration">Register</a></li>
+        <li><a href="#schedule">Event Schedule</a></li>
+        <li><a href="#sponsors">Sponsors & Partners</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="registration">
+      <h2>Register for the Event</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label for="registration-type">Registration Type:</label>
+        <select id="registration-type" name="registration-type" required>
+          <option value="attendee">Attendee</option>
+          <option value="speaker">Speaker</option>
+          <option value="organizer">Organizer</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="schedule">
+      <h2>Event Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Session Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Opening Ceremony</td>
+            <td>2024-08-10</td>
+            <td>10:00 AM</td>
+            <td>Main Hall</td>
+          </tr>
+          <tr>
+            <td>Keynote Speech</td>
+            <td>2024-08-10</td>
+            <td>11:00 AM</td>
+            <td>Conference Room A</td>
+          </tr>
+          <tr>
+            <td>Workshop 1</td>
+            <td>2024-08-10</td>
+            <td>02:00 PM</td>
+            <td>Room 101</td>
+          </tr>
+          <tr>
+            <td>Closing Remarks</td>
+            <td>2024-08-10</td>
+            <td>04:00 PM</td>
+            <td>Main Hall</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sponsors">
+      <h2>Sponsors & Partners</h2>
+      <ul>
+        <li>Company A</li>
+        <li>Company B</li>
+        <li>Company C</li>
+        <li>Organization D</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <p>Follow us on social media:</p>
+    <ul>
+      <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

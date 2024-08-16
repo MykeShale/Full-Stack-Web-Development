@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 SVG Creation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>HTML5 SVG Creation</h1>
+  </header>
+
+  <main>
+    <section id="svg-creation">
+      <h2>Interactive SVG</h2>
+      <svg width="200" height="200" onclick="changeColor(evt)">
+        <circle cx="100" cy="100" r="50" fill="blue" id="circle"/>
+      </svg>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 HTML5 SVG Creation Example</p>
+  </footer>
+
+  <script>
+    function changeColor(evt) {
+      const circle = evt.target;
+      circle.setAttribute('fill', circle.getAttribute('fill') === 'blue' ? 'green' : 'blue');
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 API Example</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML5 API Integration</h1>
+  </header>
+
+  <main>
+    <section id="geolocation">
+      <h2>Geolocation API</h2>
+      <button onclick="getLocation()">Get My Location</button>
+      <p id="location"></p>
+    </section>
+
+    <section id="web-storage">
+      <h2>Web Storage API</h2>
+      <form id="storage-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <button type="button" onclick="saveUsername()">Save</button>
+      </form>
+      <p id="saved-username"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 HTML5 API Integration Example</p>
+  </footer>
+
+  <script>
+    // Geolocation API
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        document.getElementById('location').innerText = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      document.getElementById('location').innerText = "Latitude: " + position.coords.latitude + 
+      " Longitude: " + position.coords.longitude;
+    }
+
+    // Web Storage API
+    function saveUsername() {
+      const username = document.getElementById('username').value;
+      localStorage.setItem('username', username);
+      displayUsername();
+    }
+
+    function displayUsername() {
+      const savedUsername = localStorage.getItem('username');
+      document.getElementById('saved-username').innerText = savedUsername ? "Saved Username: " + savedUsername : "No username saved.";
+    }
+
+    window.onload = function() {
+      displayUsername();
+    };
+  </script>
+</body>
+</html>
